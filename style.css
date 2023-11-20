@@ -112,3 +112,108 @@ body *{
   top: 5px;
   right: 10px;
 }
+
+#sec_interest_1 {
+  padding-top: 115px;
+  width: 960px;
+  margin: auto;
+}
+
+#sec_interest .c_ttl.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#sec_interest_1 .row .thumb {
+  padding-left: 22px;
+}
+
+#sec_interest_1 .row .thumb .point {
+  left: 2px;
+  top: -54px;
+}
+
+#sec_interest_1 .row .thumb .point p {
+  font-size: 1.7rem;
+}
+
+#sec_interest .row .thumb .point p span {
+  display: block;
+}
+
+#sec_interest .row .thumb .point p::before {
+  content: "";
+  display: block;
+  border: 3px solid #004845;
+  width: 148px;
+  height: 148px;
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+#sec_interest_1 .row dl {
+  width: calc(100% - 520px);
+}
+
+#sec_interest .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1.5s;
+}
+
+#sec_interest_2 {
+  padding-top: 105px;
+  width: 960px;
+  margin: auto;
+}
+
+#sec_interest .c_ttl.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#sec_interest_2 .row .thumb {
+  order: 1;
+  padding-right: 22px;
+}
+
+#sec_interest_2 .row .txt {
+  width: calc(100% - 520px);
+  line-height: 2;
+}
+
+#sec_interest .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1.5s;
+}
+
+#sec_interest_2 .row .thumb .point {
+  right: 2px;
+  bottom: -47px;
+}
+
+#sec_interest_2 .row .thumb .point p {
+  letter-spacing: -.1em;
+}
+
+#sec_interest_2 .row .thumb .point p span {
+  padding-top: 10px;
+}
+
+#sec_interest {
+  padding-bottom: 155px;
+}
+
+#sec_lineup h2 {
+  background: #004845;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
