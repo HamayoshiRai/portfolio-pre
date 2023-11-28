@@ -92,12 +92,6 @@ body *{
 }
 
 #sec_intro .list {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  align-items: flex-start;
   margin-top: 60px;
 }
 
@@ -109,7 +103,7 @@ body *{
 #sec_intro .list li .new {
   position: absolute;
   top: 5px;
-  right: 10px;
+  left: 25%;
 }
 
 #sec_interest_1 {
@@ -153,17 +147,6 @@ body *{
   border-radius: 50%;
 }
 
-#sec_interest_1 .row dl {
-  width: calc(100% - 520px);
-}
-
-#sec_interest .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 1.5s;
-}
-
 #sec_interest_2 {
   padding-top: 105px;
   width: 960px;
@@ -183,13 +166,6 @@ body *{
 #sec_interest_2 .row .txt {
   width: calc(100% - 520px);
   line-height: 2;
-}
-
-#sec_interest .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 1.5s;
 }
 
 #sec_interest_2 .row .thumb .point {
@@ -247,15 +223,6 @@ body *{
 #sec_lineup .lineup_area {
   background-position: center top;
   background-size: cover;
-}
-
-#sec_lineup .lineup_area .row {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  align-items: flex-end;
-  padding: 70px 0 85px;
 }
 
 .sp-s {
@@ -320,20 +287,6 @@ body *{
   transition: 1s;
 }
 
-#sec_trust .row .txt {
-  flex: 1;
-  padding-left: 20px;
-  line-height: 2;
-  letter-spacing: 1px;
-}
-
-#sec_trust .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 55px 0 25px;
-}
-
 #sec_trust h3 {
   text-align: center;
   margin-bottom: 25px;
@@ -394,13 +347,6 @@ body *{
   color: #004845;
   letter-spacing: 2px;
   margin-bottom: 25px;
-}
-
-#sec_onsale .btn_area .cta_list {
-  display: flex;
-  justify-content: center;
-  width: 935px;
-  margin: 0 auto 45px;
 }
 
 #sec_onsale .btn_area .cta_list li {
@@ -480,8 +426,55 @@ body *{
 
 @media screen and (min-width: 751px){
 
-  .pc-s { display:block; }
   .sp-s { display:none; }
+
+  #sec_intro .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 60px;
+  }
+
+  #sec_interest .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1.5s;
+  }
+
+  #sec_interest .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1.5s;
+  }
+
+  #sec_trust .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px 0 25px;
+  }
+
+  #sec_lineup .lineup_area .row {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-end;
+    padding: 70px 0 85px;
+  }
+
+  #sec_trust .row .txt {
+    flex: 1;
+    padding-left: 20px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+
+  #sec_interest_1 .row dl {
+    width: calc(100% - 520px);
+  }
 
   #sec_lineup .lineup_area#sec_lineup_hfm .row .detal_area {
     padding-bottom: 0 !important;
@@ -497,6 +490,13 @@ body *{
   .rvhfm .inner {
     background: url(./images/main_bg_pc.jpg) no-repeat;
   }
+
+  #sec_onsale .btn_area .cta_list {
+    display: flex;
+    width: 935px;
+    margin: 0 auto 45px;
+  }
+
 }
 
 @media screen and (max-width: 750px){
@@ -562,16 +562,8 @@ body *{
   }
 
   #sec_lineup .lineup_area#sec_lineup_hfm .thumb .new {
-    top: -5vw !important;
-    right: -10vw !important;
-    width: 16vw;
+    width: 20vw;
   }
-
-  #sec_lineup .lineup_area#sec_lineup_hfm .thumb {
-    margin: 0 auto;
-    width: 7600vw;
-  }
-
 
 
   /* ビーガン部分 */
@@ -589,5 +581,9 @@ body *{
     background-size: cover;
     padding-top: 16vw;
     padding-bottom: 6vw;
-}
+  }
+
+  #sec_onsale .btn_area {
+    width: 90%;
+  }
 }
