@@ -64,6 +64,19 @@ body *{
   background-image: url(./images/r-bg.jpg) ;
 }
 
+#sec_intro .c_ttl::after {
+  content: "";
+  background-image: url(./images/intro-mark.png);
+  background-repeat: no-repeat;
+  background-size: 6vw;
+  display: block;
+  width: 14vw;
+  height: 10vw;
+  position: absolute;
+  right: -3vw;
+  top: -3vw;
+}
+
 #sec_intro .inner {
   width: 960px;
   margin: auto;
@@ -103,13 +116,14 @@ body *{
 #sec_intro .list li .new {
   position: absolute;
   top: 5px;
-  left: 25%;
+  left: 40%;
 }
 
-#sec_interest_1 {
-  padding-top: 115px;
-  width: 960px;
-  margin: auto;
+#sec_intro .att_txt {
+  text-align: left;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #sec_interest .c_ttl.active {
@@ -118,16 +132,33 @@ body *{
 }
 
 #sec_interest_1 .row .thumb {
-  padding-left: 22px;
-}
-
-#sec_interest_1 .row .thumb .point {
-  left: 2px;
-  top: -54px;
+  position: relative;
 }
 
 #sec_interest_1 .row .thumb .point p {
   font-size: 1.7rem;
+}
+
+#sec_interest .row .thumb .point {
+  position: absolute;
+}
+
+#sec_interest .row .thumb .point p {
+  width: 144px;
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D2DFDE;
+  border: 6px solid white;
+  z-index: 2;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #004845;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
 }
 
 #sec_interest .row .thumb .point p span {
@@ -160,17 +191,10 @@ body *{
 
 #sec_interest_2 .row .thumb {
   order: 1;
-  padding-right: 22px;
 }
 
 #sec_interest_2 .row .txt {
-  width: calc(100% - 520px);
   line-height: 2;
-}
-
-#sec_interest_2 .row .thumb .point {
-  right: 2px;
-  bottom: -47px;
 }
 
 #sec_interest_2 .row .thumb .point p {
@@ -254,26 +278,6 @@ body *{
   margin-bottom: 1em;
 }
 
-#sec_lineup .lineup_area .row .detal_area a.btn {
-  background-image: url(./images/btn-shop.png);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 340px auto;
-  width: 340px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-  transition: .1s;
-  margin-top: 30px;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 0px 0px #001419;
-  border-radius: 11px;
-}
-
 #sec_trust .inner {
   width: 960px;
   margin: auto;
@@ -349,10 +353,6 @@ body *{
   margin-bottom: 25px;
 }
 
-#sec_onsale .btn_area .cta_list li {
-  margin: 0 13px;
-}
-
 #sec_onsale .btn_area .cta_list li a {
   background-image: url(./images/btn-cart.png);
   background-repeat: no-repeat;
@@ -424,6 +424,11 @@ body *{
   z-index: 10;
 }
 
+:not(.eclinks-modal img) {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 751px){
 
   .sp-s { display:none; }
@@ -447,6 +452,23 @@ body *{
     justify-content: space-between;
     align-items: center;
     transition: 1.5s;
+  }
+
+  #sec_interest .c_ttl {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    transition: 1s;
+  }
+
+  #sec_interest_1 .row .thumb .point {
+    left: 2px;
+    top: -54px;
+  }
+
+  #sec_interest_2 .row .thumb .point {
+    right: 360px;
+    bottom: -2120px;
   }
 
   #sec_trust .row {
@@ -476,6 +498,32 @@ body *{
     width: calc(100% - 520px);
   }
 
+  #sec_interest_1 {
+    padding-top: 115px;
+    width: 960px;
+    margin: auto;
+  }
+
+  #sec_lineup .lineup_area .row .detal_area a.btn {
+    background-image: url(./images/btn-shop.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 340px auto;
+    width: 340px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: .1s;
+    margin-top: 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 0px 0px #001419;
+    border-radius: 11px;
+  }
+
   #sec_lineup .lineup_area#sec_lineup_hfm .row .detal_area {
     padding-bottom: 0 !important;
   }
@@ -497,12 +545,16 @@ body *{
     margin: 0 auto 45px;
   }
 
+  #sec_onsale .btn_area .cta_list li {
+    margin: 0 13px;
+  }
+
 }
 
 @media screen and (max-width: 750px){
 
   .pc-s { display:none; }
-  .sp-s { display:block; }
+  .sp-s { display:block; }  
 
   #sec_kv.rvhfm {
     background-image: url(./images/main_bg_sp.jpg);
@@ -529,12 +581,24 @@ body *{
     margin: 0 auto 5vw auto;
   }
 
-  :not(.eclinks-modal img) {
-    max-width: 100%;
-    height: auto;
+  #sec_intro .list li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    justify-content: center;
   }
 
-  #sec_intro .list li {
+  #sec_intro .list li:nth-child(1) .fig {
+    order: 2;
+  }
+
+  #sec_intro .list li:nth-child(3) .fig {
+    order: 2;
+  }
+
+  #sec_interest .row .thumb img {
+    width: 100%;
     justify-content: center;
   }
 
@@ -543,8 +607,35 @@ body *{
     background-size: 300px;
   }
 
+    /* 3セクション */
+
+  #sec_interest_1 .row dl {
+    text-align: center;
+  }
+
   #sec_interest_1 .row img.ttl {
+    height: auto;
+    margin: 9vw auto;
     width: 90%;
+  }
+
+  #sec_interest_1 .row dl dt {
+    margin-bottom: 4vw;
+  }
+
+  #sec_interest_1 .row dl dd + dt {
+    margin-top: 8vw;
+  }
+
+  #sec_interest_1 .row dl dd {
+    font-weight: 500;
+    line-height: 2;
+    font-feature-settings: "palt";
+  }
+
+  #sec_interest_1 .row dl dt img.sttl2 {
+    width: 53.3vw;
+    height: auto;
   }
 
   #sec_interest_1 .row dl dt img.sttl {
@@ -552,13 +643,134 @@ body *{
     height: auto;
   }
 
+  #sec_interest_1 .row .thumb .point {
+    right: 5vw;
+    bottom: -10vw;
+  }
+
+  #sec_interest_2 .row .thumb .point {
+    right: 5vw;
+    bottom: -520vw;
+  }
+
+  #sec_interest_2 .row .txt h3 {
+    width: 80vw;
+    margin: 8vw auto;
+  }
+
+  #sec_interest_2 .row .txt h3 img {
+    width: 500px;
+    height: 100%;
+  }
+
+  #sec_interest_2 .row .txt {
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+  }
+
+    /* 4セクション */
+
+  #sec_lineup .lineup_area .row {
+    transition: 1s;
+    padding-top: 10vw;
+  }
+
+  #sec_lineup .lineup_area .detal_area {
+    padding-bottom: 8vw;
+    text-align: center;
+  }
+
   #sec_lineup .lineup_area#sec_lineup_hfm .ttl {
     width: 75vw;
     margin: 0 auto 7vw;
   }
 
+  #sec_lineup .lineup_area#sec_lineup_hfm .thumb {
+    margin: 0 auto;
+    width: 76vw;
+  }
+
+  .lineup_area#sec_lineup_1 .ttl {
+    width: 71vw;
+    margin: 0 auto 7vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_1 .thumb {
+    padding-left: 11vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_3 .ttl {
+    width: 75vw;
+    margin: 0 auto 7vw;
+  }
+
   #sec_lineup .lineup_area .row.active .thumb {
-    position: relative;
+      position: relative;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_3 .thumb {
+    padding-left: 5vw;
+    width: 76vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_2 .ttl {
+    width: 70vw;
+    margin: 0 auto 7vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_2 .thumb {
+    padding-left: 6vw;
+    width: 78vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_4 .ttl {
+    width: 77vw;
+    margin: 0 auto 7vw;
+  }
+
+  #sec_lineup .lineup_area#sec_lineup_4 .thumb {
+    padding: 0 10vw;
+  }
+
+  #sec_lineup .lineup_area .row.active .thumb .badge {
+    position: absolute;
+    top: 45vw;
+    left: 10vw;
+    width: 16vw;
+  }
+
+  #sec_lineup .lineup_area .detal_area a.btn {
+    background-image: url(./images/btn-shop-sp.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: transparent;
+    background-size: 100% auto;
+    width: 55vw;
+    height: 11.7vw;
+    text-indent: -9999px;
+    margin: 4vw auto 0;
+    display: block;
+  }
+
+  #sec_trust .row .thumb {
+    margin-bottom: 12vw;
+  }
+
+  #sec_trust .row .thumb img {
+    width: 100%;
+  }
+
+  #sec_trust .row .ttl {
+    width: 58vw;
+    height: auto;
+    margin: 0 auto 8vw;
+    display: block;
+  }
+
+  #sec_trust .row .txt {
+    line-height: 2;
+    text-align: center;
   }
 
   #sec_lineup .lineup_area#sec_lineup_hfm .thumb .new {
@@ -568,7 +780,7 @@ body *{
 
   /* ビーガン部分 */
   .vegan {
-    margin: 0 auto 16vw auto;
+    margin: 16vw auto;
     text-align: center;
   }
 
@@ -585,5 +797,10 @@ body *{
 
   #sec_onsale .btn_area {
     width: 90%;
+  }
+
+
+  #sec_onsale .btn_area .cta_list li {
+    margin: 30px 75px;
   }
 }
